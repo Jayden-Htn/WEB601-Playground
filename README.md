@@ -29,7 +29,7 @@ app.listen(3000, () => {
 ```
 In order to receive http requests, the express instance must open a port to receive requests on. The above opens the port 3000.
 
-## Methods
+### Methods
 
 All methods take two parameters:
 app.method('/route', (req, res)) => {do stuff}
@@ -44,5 +44,10 @@ Methods:
 - put: update resources
 - delete: delete resource
 - use: indicates that the express instance show use the parameter input
-
  
+### Testing
+
+To run and test the apis in this repository:
+- Run 'node server.js' in the terminal (or whatever the file is named)
+- Open 'http://localhost:3000/' in a browser (or whatever the port is)
+- The server will have to be restarted to update any changes unless using a package like nodemon
