@@ -8,8 +8,6 @@ const rootDir = require('../util/path');
 // returns the displayed html file
 router.get('/', (req, res, next) => {
     res.sendFile(path.join(rootDir, 'views', 'home.html'));
-    //res.send('Hello World!');
-    // res.send('<h1>Hello from Express!</h1>');
 });
 
 module.exports = router;
