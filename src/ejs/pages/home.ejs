@@ -1,0 +1,18 @@
+<%- include('./template/head.ejs') -%>
+
+<body>
+    <div>
+        <%- include('./template/nav.ejs') -%>
+
+        <main>
+            <h1>Welcome to my home page!</h1>
+            <p>WEB601 web dev.</p>
+        </main>
+    </div>
+</body>
+
+<script>
+    window.onload = function() {
+        document.getElementById('home').classList.add('active');
+    }
+</script>

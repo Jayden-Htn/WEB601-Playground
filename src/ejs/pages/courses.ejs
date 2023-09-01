@@ -1,0 +1,35 @@
+<%- include('./template/head.ejs') -%>
+
+<body>
+    <div>
+        <%- include('./template/nav.ejs') -%>
+        <main>
+            <h1>Here are the courses I take:</h1>
+            <p>I am studying at NMIT.</p>
+
+            <table>
+                <thread>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Course Description</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <%table.forEach(function(e) {%>
+                    <tr>
+                        <td><%= e.name %></td>
+                        <td><%= e.description %></td>
+                    </tr>
+                    <%})%>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <%- include('./template/footer.ejs') -%>
+</body>
+
+<script>
+    window.onload = function() {
+        document.getElementById('courses').classList.add('active');
+    }
+</script>

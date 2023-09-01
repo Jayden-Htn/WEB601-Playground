@@ -1,0 +1,31 @@
+<%- include('./template/head.ejs') -%>
+
+<body>
+    <div>
+        <%- include('./template/nav.ejs') -%>
+        <main>
+            <%- include('./template/message.ejs') -%>
+            <h1>Form</h1>
+            <form method="POST" action="/form">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+
+        <%- include('./template/footer.ejs') -%>
+    </div>
+</body>
+
+<script>
+    window.onload = function() {
+        document.getElementById('home').classList.add('active');
+    }
+</script>
+
