@@ -57,7 +57,7 @@ export const login = async (req, res) => {
         console.log('pass 2');
         if (!isPasswordValid) {
             res.status(401).json({ message: 'Authentication failed. Wrong password!'});
-        } 
+        }
         console.log('pass 3');
         // if user is found and password is right
         // create a token
