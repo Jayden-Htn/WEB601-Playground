@@ -5,7 +5,7 @@ const Contact = mongoose.model('Contact', ContactSchema);
 
 export const addNewContact = async (req, res) => {
     try {
-        console.log(req.body);
+        console.log(req.body)
         const newContact = new Contact(req.body);
         const savedContact = await newContact.save();
         res.json(savedContact);
