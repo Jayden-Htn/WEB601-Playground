@@ -1,26 +1,26 @@
 import mongoose from 'mongoose';
-import { ContactSchema } from '../models/crmModel';
+import { ContactSchema } from '../models/crmModel.js';
 
 const Contact = mongoose.model('Contact', ContactSchema);
 
-export const addNewContact = (req, res) => {
-    let newContact = new Contact(req.body);
-
-    newContact.save((err, contact) => {
-        if (err) {
-            res.send(err);
-        }
-        res.json(contact);
-    });
+export const addNewContact = async (req, res) => {
+    try {
+        console.log(req.body);
+        const newContact = new Contact(req.body);
+        const savedContact = await newContact.save();
+        res.json(savedContact);
+    } catch (err) {
+        res.status(500).send(err);
+    }
 };
 
-export const getContacts = (req, res) => {
-    Contact.find({}, (err, contact) => {
-        if (err) {
-            res.send(err);
-        }
-        res.json(contact);
-    });
+export const getContacts = async (req, res) => {
+    try {
+        const contacts = await Contact.find({});
+        res.json(contacts);
+    } catch (err) {
+        res.status(500).send(err);
+    }
 };
 
 export const getContactWithID = (req, res) => {
