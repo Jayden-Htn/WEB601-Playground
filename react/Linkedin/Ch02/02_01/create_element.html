@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" /> 
+    <!-- links to react's CDN (content delivery network), quickly adds the react library to the page -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <!-- create root element to nest react elements in -->
+    <div id="root"></div>
+
+    <!-- elements are added with JS so they are done in the script tag or linked script file -->
+    <script type="text/javascript">
+      // render react element to the DOM, takes element to render and where to render it
+      ReactDOM.render(
+        // createElement('element type', 'properties', 'content')
+        React.createElement('h1', null, 'Hello World'), 
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>

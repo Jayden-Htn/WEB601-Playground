@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      // JSX = JavaScript XML, a syntax extension to JavaScript
+      // acts as helper to create react elements more easily
+      // recreates the previous list but with JSX
+      // note: this script won't run in the browser because it needs to be compiled first
+      ReactDOM.render(
+        <ul>
+          <li>a</li>
+          <li>b</li>
+          <li>c</li>
+        </ul>,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
