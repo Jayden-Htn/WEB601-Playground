@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // components are functions that return JSX
+      function Header() {
+        return (
+          <header>
+            <h1>My first react page</h1>
+          </header>
+        );
+      }
+      function Main() {
+        return (
+          <section>
+            <p>
+              Wow this is very cool.
+            </p>
+          </section>
+        );
+      }
+      // good practice to add all components to a single component before rendering
+      // instead of rendering each component individually
+      function App() {
+        // must wrap multiple elements in a single element (div) to render
+        return (
+          <div>
+            <Header />
+            <Main />
+          </div>
+        );
+      }
+
+      ReactDOM.render(
+        <App />,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
