@@ -11,3 +11,9 @@ In html body:
 <script type="type/javascript">
     ReactDom.render(React.createElement('tag', properties, 'Text'), document.getElementById('root'));
 </script>
+
+
+## Popular React Form Libraries
+- https://formik.org/
+- https://react-hook-form.com/
+- https://usehooks.com/
