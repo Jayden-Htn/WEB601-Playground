@@ -1,4 +1,0 @@
-files shoudl go in this folder
-
-e.g.:
-nature.png
