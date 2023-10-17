@@ -13,7 +13,7 @@ const schema = joi.object({
         .required(),
 });
 
-module.export = schema;
+module.exports = schema;
 
 
 
